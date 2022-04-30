@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.calculadora {
+    position: relative;
+    display: grid;
+    grid-gap: 2px;
+}
+
+.calculadora .tela {
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.calculadora span {
+    display: grid;
+    width: 80px;
+    height: 80px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+    background-color: #e8e8e8;
+    user-select: none;
+}
+
+.calculadora span:active {
+    background-color: #F5CAD5;
+    font-size: 45px;
+}
+
+.calculadora span.limpar {
+    grid-column: span 2;
+    width: 162px;
+    background-color: #FC44FC;
+}
+
+.calculadora span.igual {
+    grid-row: span 2;
+    height: 162px;
+    line-height: 162px;
+    background-color: #F241C8;
+}
+
+.calculadora span.zero {
+    grid-column: span 2;
+    width: 162px;
+}
+
+.calculadora span.mais {
+    background-color: #F2A3C8;
+}
+
+.calculadora span.menos {
+    background-color: #F574F5;
+}
+
+.calculadora span.vezes {
+    background-color: #F581D5;
+}
+
+.calculadora span.dividir {
+    background-color: #F5CAD5;
+}
