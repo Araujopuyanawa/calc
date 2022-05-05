@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="./style.css"
 </head>
 
 <body>
-
-    <form class="calculadora" name="calculadora">
-
-        <input class="tela" type="text" name="texto" readonly="">
-
-        <span class="num limpar" onclick="document.calculadora.texto.value =''">C</span>
-        <span class="num dividir" onclick="document.calculadora.texto.value +='/'">/</span>
-        <span class="num vezes" onclick="document.calculadora.texto.value +='*'">*</span>
-        <span class="num" onclick="document.calculadora.texto.value +='7'">7</span>
-        <span class="num" onclick="document.calculadora.texto.value +='8'">8</span>
-        <span class="num" onclick="document.calculadora.texto.value +='9'">9</span>
-        <span class="num menos" onclick="document.calculadora.texto.value +='-'">-</span>
-        <span class="num" onclick="document.calculadora.texto.value +='4'">4</span>
-        <span class="num" onclick="document.calculadora.texto.value +='5'">5</span>
-        <span class="num" onclick="document.calculadora.texto.value +='6'">6</span>
-        <span class="num mais" onclick="document.calculadora.texto.value +='+'">+</span>
-        <span class="num" onclick="document.calculadora.texto.value +='1'">1</span>
-        <span class="num" onclick="document.calculadora.texto.value +='2'">2</span>
-        <span class="num" onclick="document.calculadora.texto.value +='3'">3</span>
-        <span class="num igual" onclick="document.calculadora.texto.value = eval(calculadora.texto.value)">=</span>
-        <span class="num zero" onclick="document.calculadora.texto.value +='0'">0</span>
-        <span class="num" onclick="document.calculadora.texto.value +='.'">.</span>
-
-
-    </form>
-    <script src="./script.js"></script>
+    <div class="fundo">
+        <h1>Naira Araújo</h1>
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><button class="botao" onclick="clean()">C</button></td>
+                    <td><button class="botao" onclick="back()"><</button></td>
+                    <td><button class="botao" onclick="insert('/')">/</button></td>
+                    <td><button class="botao" onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="botao" onclick="insert('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./script.js">
+        
+    </script>
 </body>
 
 </html>

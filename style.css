@@ -1,83 +1,48 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oxanium', cursive;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+.fundo {
+    background-image: linear-gradient(45deg, black, rgb(85, 9, 80));
+    height: 100vh;
+    color: rgb(234, 228, 233);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .calculadora {
-    position: relative;
-    display: grid;
-    grid-gap: 2px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px;
 }
 
-.calculadora .tela {
-    grid-column: span 4;
-    height: 100px;
-    text-align: right;
-    border: none;
-    outline: none;
-    padding: 10px;
+.botao {
+    width: 50px;
+    height: 50px;
     font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(227, 18, 199);
+    border: none;
+    color: #fff;
 }
 
-.calculadora span {
-    display: grid;
-    width: 80px;
-    height: 80px;
-    color: #000;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 80px;
-    background-color: #e8e8e8;
-    user-select: none;
+.botao:hover {
+    background-color: black;
 }
 
-.calculadora span:active {
-    background-color: #F5CAD5;
-    font-size: 45px;
-}
-
-.calculadora span.limpar {
-    grid-column: span 2;
-    width: 162px;
-    background-color: #FC44FC;
-}
-
-.calculadora span.igual {
-    grid-row: span 2;
-    height: 162px;
-    line-height: 162px;
-    background-color: #F241C8;
-}
-
-.calculadora span.zero {
-    grid-column: span 2;
-    width: 162px;
-}
-
-.calculadora span.mais {
-    background-color: #F2A3C8;
-}
-
-.calculadora span.menos {
-    background-color: #F574F5;
-}
-
-.calculadora span.vezes {
-    background-color: #F581D5;
-}
-
-.calculadora span.dividir {
-    background-color: #F5CAD5;
+#resultado {
+    background-color: white;
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding: 5px;
 }
