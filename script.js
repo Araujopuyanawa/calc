@@ -15,9 +15,9 @@ function back() {
 function calcular() {
     var resultado = document.getElementById('resultado').innerHTML;
     if (resultado) {
-        var promptt = eval(resultado);
-        alert(resultado + " = " + promptt)
-        document.getElementById('resultado').innerHTML = promptt;
+        var final = eval(resultado);
+        alert(resultado + " = " + final)
+        document.getElementById('resultado').innerHTML = final;
     } else {
         document.getElementById('resultado').innerHTML = "Nada...";
     }
